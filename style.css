@@ -19,11 +19,19 @@ h2{
 }
 
 
+.dibujoCuadrado{
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ACD9B2;
+}
+
 .dibujoCirculo{
     margin: 20px;
     width: 60px;
     height: 60px;
     border: 1px solid #ACD9B2;
+    border-radius: 50%;
 }
 .containerFormulas{
     max-width: 350px;
@@ -33,8 +41,25 @@ h2{
     align-items: center;
 }
 
-.formulaCuadrado{
+.formulaCuadrado,
+.formulaTriangulo{
     justify-self: center;
+}
+
+.dibujoTriangulo{
+    width: 0; 
+    height: 0; 
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid #ACD9B2; 
+}
+
+.dibujoIsosceles{
+    width: 0; 
+    height: 0; 
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 70px solid #ACD9B2; 
 }
 
 .principal{
@@ -43,11 +68,25 @@ h2{
     color: #C7C7C7;
 }
 
+.containerGeneral{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5{
+    max-width: 380px;
+    margin: 10px;
+}
+
 ul li{
     font-size: 2rem;
     color: #ACD9B2;
     text-decoration: underline;
-    padding-bottom: 10px;
 }
 
 .triangle{
@@ -64,4 +103,10 @@ ul li{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     justify-items: start;
+}
+
+@media (max-width: 650px) {
+ .containerGeneral{
+    display: block;
+ }   
 }

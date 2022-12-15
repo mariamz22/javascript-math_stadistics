@@ -16,55 +16,76 @@
     
     <p class="principal">Realizaremos cálculos matemáticos con figuras geométricas</p>
     
-    <ul>
-        <li>Cuadrado</li>
-        <div class="square">
-            <label>Ingresa la medida del lado</label>
-            <input type="text" class="ladoSquare" >
+    <ul class="containerGeneral">
+        <div class="container1"> 
+            <li>Cuadrado</li>
+            <div class="square">
+                <label>Ingresa la medida del lado</label>
+                <input type="text" class="ladoSquare" >
+            </div>
+            <div class="containerFormulas">
+                <div class="dibujoCuadrado"></div>
+                <div class="formulaCuadrado">
+                    <p class="perimetro-cuadrado"></p>
+                    <p class="area-cuadrado"></p>
+                </div>
+            </div>
         </div>
-        <div class="containerFormulas">
-            <div class="dibujoCirculo"></div>
-            <div class="formulaCuadrado">
-                <p class="perimetro-cuadrado"></p>
-                <p class="area-cuadrado"></p>
+        <div class="container2">
+            <li>Triángulo</li>
+            <div class="triangle">
+                <label>Ingresa la medida de la altura</label>
+                <input type="text" class="alturaTriangle"  id="">
+                
+                <label>Ingresa la medida del lado 1 </label>
+                <input type="text" class="lado1Triangle" id="">
+                
+                <label>Ingresa la medida del lado 2 </label>
+                <input type="text" class="lado2Triangle"  id="">
+                
+                <label>Ingresa la medida del lado 3 </label>
+                <input type="text" class="lado3Triangle"  id="">
+            </div>  
+            <div class="containerFormulas">
+                <div class="dibujoTriangulo"></div>
+                <div class="formulaTriangulo">
+                    <p class="perimetro-triangulo"></p>
+                    <p class="area-triangulo"></p>
+                </div>
             </div>
         </div>
         
-        
-        <li>Triángulo</li>
-        <div class="triangle">
-            <label>Ingresa la medida de la altura</label>
-            <input type="text" class="alturaTriangle"  id="">
-            
-            <label>Ingresa la medida del lado 1 </label>
-            <input type="text" class="lado1Triangle" id="">
-            
-            <label>Ingresa la medida del lado 2 </label>
-            <input type="text" class="lado2Triangle"  id="">
-            
-            <label>Ingresa la medida del lado 3 </label>
-            <input type="text" class="lado3Triangle"  id="">
-        </div>  
-        <p class="perimetro-triangulo"></p>
-        <p class="area-triangulo"></p>
-        
-        <li>Circulo</li>
-        <div class="circle">
-            <label>Ingresa la medida del radio</label>
-            <input type="text" class="radio" >
+        <div class="container3">
+            <li>Circulo</li>
+            <div class="circle">
+                <label>Ingresa la medida del radio</label>
+                <input type="text" class="radio" >
+            </div>
+            <div class="containerFormulas">
+                <div class="dibujoCirculo"></div>
+                <div class="formulaCirculo">
+                    <p class="circunferencia"></p>
+                    <p class="area-circulo"></p>
+                </div>
+            </div>
         </div>
-        <p class="circunferencia"></p>
-        <p class="area-circulo"></p>
         
-        <li>Triángulo Isóceles</li>
-        <div class="triangleIs">
-            <label>Ingresa la medida del lado </label>
-            <input type="text" class="ladoTI" id="">
-            <label>Ingresa la medida de la base </label>
-            <input type="text" class="baseT" id="">
+        <div class="container4">
+            <li>Triángulo Isóceles</li>
+            <div class="triangleIs">
+                <label>Ingresa la medida del lado </label>
+                <input type="text" class="ladoTI" id="">
+                <label>Ingresa la medida de la base </label>
+                <input type="text" class="baseT" id="">
+            </div>
+            <div class="containerFormulas">
+                <div class="dibujoIsosceles"></div>
+                <p class="altura"></p>
+            </div>
         </div>
-        <p class="altura"></p>
-        
+    </div>
+    
+    <div class="container5">
         <li>Triángulo Escaleno</li>
         <div class="triangle">
             <label>Ingresa la medida del lado 1</label>
@@ -77,10 +98,11 @@
             <input type="text" class="baseEsc" id="">
         </div>
         <p class="alturaEsc"></p>
-        
-    </ul>
+    </div>
     
-    
-    <script src="./main.js"></script>
+</ul>
+
+
+<script src="./main.js"></script>
 </body>
 </html>

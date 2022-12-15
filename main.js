@@ -68,10 +68,10 @@ radioC.addEventListener('change',()=>{
     if (radioC.value > 0){
         
         let rad = Number(radioC.value);  
-        diametro = rad * 2;   
-        radCuad = rad ** 2;       
-        circunferencia.innerHTML = "La circunferencia es: " + diametro * Math.PI;
-        areaCircle.innerHTML =  "El área del círculo es: " + radCuad * Math.PI;
+        diametro = rad * 2 * Math.PI;   
+        radCuad = rad ** 2 * Math.PI;       
+        circunferencia.innerHTML = "La circunferencia es: " + diametro.toFixed(2);
+        areaCircle.innerHTML =  "El área del círculo es: " + radCuad.toFixed(2);
         
     } else{
         circunferencia.innerHTML = "El radio no puede ser 0";
