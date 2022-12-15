@@ -18,6 +18,25 @@ h2{
     font-weight: bold;
 }
 
+
+.dibujoCirculo{
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ACD9B2;
+}
+.containerFormulas{
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.formulaCuadrado{
+    justify-self: center;
+}
+
 .principal{
     font-size: 2rem;
     font-weight: 300;
@@ -28,7 +47,7 @@ ul li{
     font-size: 2rem;
     color: #ACD9B2;
     text-decoration: underline;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .triangle{
@@ -36,5 +55,13 @@ ul li{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    justify-items: start;
+}
+
+.triangleIs{
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     justify-items: start;
 }

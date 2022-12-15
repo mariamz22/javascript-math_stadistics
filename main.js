@@ -18,16 +18,21 @@ const radioC = document.querySelector('.radio');
 const circunferencia = document.querySelector('.circunferencia');
 const areaCircle = document.querySelector('.area-circulo');
 
+//Triangulo Isósceles
+const ladoIs = document.querySelector('.ladoTI');
+const baseIs = document.querySelector('.baseT');
+const alturaTI = document.querySelector('.altura');
+
 //Funciones
 
 //Cuadrado
 ladoC.addEventListener('change',()=>{
     if (ladoC.value > 0){
-
+        
         let lado = Number(ladoC.value);            
         perimetroC.innerHTML = "El perímetro del cuadrado es: " + lado * 4;
         areaC.innerHTML =  "El área del cuadrado es: " + lado ** 2;
-                
+        
     } else{
         perimetroC.innerHTML = "El lado no puede ser 0";
         areaC.innerHTML =  "El lado no puede ser 0";
@@ -61,16 +66,38 @@ lado3.addEventListener('change',()=>{
 //Circulo
 radioC.addEventListener('change',()=>{
     if (radioC.value > 0){
-
+        
         let rad = Number(radioC.value);  
         diametro = rad * 2;   
         radCuad = rad ** 2;       
         circunferencia.innerHTML = "La circunferencia es: " + diametro * Math.PI;
         areaCircle.innerHTML =  "El área del círculo es: " + radCuad * Math.PI;
-                
+        
     } else{
         circunferencia.innerHTML = "El radio no puede ser 0";
         areaCircle.innerHTML =  "El radio no puede ser 0";
     }
     
+})
+
+//Triángulo Isósceles
+
+baseIs.addEventListener('change',()=>{
+    let ladoTr = Number(ladoIs.value)
+    let baseTr = Number(baseIs.value);
+    
+    if(ladoTr > 0 && ladoTr != baseTr && baseTr > 0){
+        
+        
+        let ladoCuadrado = Math.pow(ladoTr,2);
+        let baseCuadrada = Math.pow(baseTr,2);
+        let alturaTr = Math.sqrt(ladoCuadrado-baseCuadrada/4);
+        
+        alturaTI.innerHTML = " La altura del triángulo es " + alturaTr.toFixed(2    );
+        
+    }else if(ladoTr == baseTr){
+        alturaTI.innerHTML = "El lado no puede ser igual a la base" ;
+    }else{
+        alturaTI.innerHTML = "El lado o la base no pueden ser 0" ;
+    }
 })

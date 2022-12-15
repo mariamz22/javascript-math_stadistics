@@ -22,8 +22,13 @@
             <label>Ingresa la medida del lado</label>
             <input type="text" class="ladoSquare" >
         </div>
-        <p class="perimetro-cuadrado"></p>
-        <p class="area-cuadrado"></p>
+        <div class="containerFormulas">
+            <div class="dibujoCirculo"></div>
+            <div class="formulaCuadrado">
+                <p class="perimetro-cuadrado"></p>
+                <p class="area-cuadrado"></p>
+            </div>
+        </div>
         
         
         <li>Triángulo</li>
@@ -51,7 +56,31 @@
         <p class="circunferencia"></p>
         <p class="area-circulo"></p>
         
+        <li>Triángulo Isóceles</li>
+        <div class="triangleIs">
+            <label>Ingresa la medida del lado </label>
+            <input type="text" class="ladoTI" id="">
+            <label>Ingresa la medida de la base </label>
+            <input type="text" class="baseT" id="">
+        </div>
+        <p class="altura"></p>
+        
+        <li>Triángulo Escaleno</li>
+        <div class="triangle">
+            <label>Ingresa la medida del lado 1</label>
+            <input type="text" class="lado1Esc" id="">
+            
+            <label>Ingresa la medida del lado 2</label>
+            <input type="text" class="lado2Esc" id="">
+            
+            <label>Ingresa la medida de la base </label>
+            <input type="text" class="baseEsc" id="">
+        </div>
+        <p class="alturaEsc"></p>
+        
     </ul>
+    
+    
     <script src="./main.js"></script>
 </body>
 </html>
