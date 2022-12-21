@@ -21,15 +21,15 @@ h2{
 
 .dibujoCuadrado{
     margin: 20px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border: 1px solid #ACD9B2;
 }
 
 .dibujoCirculo{
     margin: 20px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border: 1px solid #ACD9B2;
     border-radius: 50%;
 }
@@ -62,6 +62,14 @@ h2{
     border-bottom: 70px solid #ACD9B2; 
 }
 
+.dibujoEscaleno{
+    width: 0; 
+    height: 0; 
+    border-left: 30px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 70px solid #ACD9B2; 
+}
+
 .principal{
     font-size: 2rem;
     font-weight: 300;
@@ -83,7 +91,8 @@ h2{
     margin: 10px;
 }
 
-ul li{
+ul li, 
+ul a{
     font-size: 2rem;
     color: #ACD9B2;
     text-decoration: underline;

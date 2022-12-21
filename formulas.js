@@ -23,6 +23,12 @@ const ladoIs = document.querySelector('.ladoTI');
 const baseIs = document.querySelector('.baseT');
 const alturaTI = document.querySelector('.altura');
 
+//Trinangulo Escaleno
+const lado1Esc = document.querySelector('.lado1Esc');
+const lado2Esc = document.querySelector('.lado2Esc');
+const baseEs = document.querySelector('.baseEsc');
+const alturaEsc = document.querySelector('.alturaEsc');
+
 //Funciones
 
 //Cuadrado
@@ -83,7 +89,7 @@ radioC.addEventListener('change',()=>{
 //Triángulo Isósceles
 
 baseIs.addEventListener('change',()=>{
-    let ladoTr = Number(ladoIs.value)
+    let ladoTr = Number(ladoIs.value);
     let baseTr = Number(baseIs.value);
     
     if(ladoTr > 0 && ladoTr != baseTr && baseTr > 0){
@@ -93,7 +99,7 @@ baseIs.addEventListener('change',()=>{
         let baseCuadrada = Math.pow(baseTr,2);
         let alturaTr = Math.sqrt(ladoCuadrado-baseCuadrada/4);
         
-        alturaTI.innerHTML = " La altura del triángulo es " + alturaTr.toFixed(2    );
+        alturaTI.innerHTML = " La altura del triángulo es " + alturaTr.toFixed(2);
         
     }else if(ladoTr == baseTr){
         alturaTI.innerHTML = "El lado no puede ser igual a la base" ;
@@ -101,3 +107,31 @@ baseIs.addEventListener('change',()=>{
         alturaTI.innerHTML = "El lado o la base no pueden ser 0" ;
     }
 })
+
+//Triangulo Escaleno
+baseEs.addEventListener('change', ()=>{
+    let lado1Es =  Number(lado1Esc.value);
+    let lado2Es =  Number(lado2Esc.value);
+    let baseEsc =  Number(baseEs.value);
+    
+    if(lado1Es > 0 && lado2Es > 0 && baseEsc > 0 ||
+        lado1Es != lado2Es ||  lado2Es != baseEsc ||
+        lado1Es != baseEsc){
+            
+            let semiPerimetro = (lado1Es + lado2Es + baseEsc) / 2;
+            let sA = semiPerimetro - baseEsc;
+            let sB = semiPerimetro - lado1Es;
+            let sC = semiPerimetro - lado2Es;
+            let raiz = semiPerimetro * sA * sB * sC;
+            let altura = 2 / baseEsc * Math.sqrt(raiz);
+            
+            alturaEsc.innerHTML = "La altura del triángulo escaleno es " + altura;
+            
+        }else if(lado1Es == 0 || lado2Es == 0 || baseEsc == 0){
+            alturaEsc.innerHTML = "Las medidas no pueden ser 0";
+
+        }else if(lado1Es == lado2Es ||  lado2Es == baseEsc || lado1Es == baseEsc){
+            alturaEsc.innerHTML = "Los lados no pueden ser iguales";
+        }
+        
+    })

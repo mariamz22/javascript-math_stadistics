@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <title>Taller de JavaScript</title>
+</head>
+<body>
+    <h1>Taller de Javascript:</h1>
+    <h2>Matemáticas y Estadística Básica</h2>
+    
+    <p class="principal">Realizaremos cálculos matemáticos con figuras geométricas</p>
+    
+    <ul class="containerGeneral">
+        <div class="container1"> 
+            <li>Cuadrado</li>
+            <div class="square">
+                <label>Ingresa la medida del lado</label>
+                <input type="text" class="ladoSquare" >
+            </div>
+            <div class="containerFormulas">
+                <div class="dibujoCuadrado"></div>
+                <div class="formulaCuadrado">
+                    <p class="perimetro-cuadrado"></p>
+                    <p class="area-cuadrado"></p>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <li>Triángulo</li>
+            <div class="triangle">
+                <label>Ingresa la medida de la altura</label>
+                <input type="text" class="alturaTriangle"  id="">
+                
+                <label>Ingresa la medida del lado 1 </label>
+                <input type="text" class="lado1Triangle" id="">
+                
+                <label>Ingresa la medida del lado 2 </label>
+                <input type="text" class="lado2Triangle"  id="">
+                
+                <label>Ingresa la medida del lado 3 </label>
+                <input type="text" class="lado3Triangle"  id="">
+            </div>  
+            <div class="containerFormulas">
+                <div class="dibujoTriangulo"></div>
+                <div class="formulaTriangulo">
+                    <p class="perimetro-triangulo"></p>
+                    <p class="area-triangulo"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container3">
+            <li>Circulo</li>
+            <div class="circle">
+                <label>Ingresa la medida del radio</label>
+                <input type="text" class="radio" >
+            </div>
+            <div class="containerFormulas">
+                <div class="dibujoCirculo"></div>
+                <div class="formulaCirculo">
+                    <p class="circunferencia"></p>
+                    <p class="area-circulo"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container4">
+            <li>Triángulo Isóceles</li>
+            <div class="triangleIs">
+                <label>Ingresa la medida del lado </label>
+                <input type="text" class="ladoTI" id="">
+                <label>Ingresa la medida de la base </label>
+                <input type="text" class="baseT" id="">
+            </div>
+            <div class="containerFormulas">
+                <div class="dibujoIsosceles"></div>
+                <p class="altura"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container5">
+        <li>Triángulo Escaleno</li>
+        <div class="triangle">
+            <label>Ingresa la medida del lado 1</label>
+            <input type="text" class="lado1Esc" id="">
+            
+            <label>Ingresa la medida del lado 2</label>
+            <input type="text" class="lado2Esc" id="">
+            
+            <label>Ingresa la medida de la base </label>
+            <input type="text" class="baseEsc" id="">
+        </div>
+        <div class="containerFormulas">
+            <div class="dibujoEscaleno"></div>
+            <p class="alturaEsc"></p>
+        </div>
+    </div>
+    
+</ul>
+
+
+<script src="./formulas.js"></script>
+</body>
+</html>
